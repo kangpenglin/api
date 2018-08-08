@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\image;
 use App\text;
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\temp;
 class Api extends Controller
 {
 	public function image(Request $request)
@@ -22,7 +22,7 @@ class Api extends Controller
 		{
 			$arr[]=$i;
 		}
-	       	
+	    img();
 		return response()->json(
 			["code"=>"200","msg"=>$arr]
 		);
